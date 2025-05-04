@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
- @include('layouts.css')
-
-</head>
-
-<body class="sub_page">
-    <!-- header section strats -->
-    @include('layouts.header')
-    <!-- end header section -->
-  </div>
+@section('content')
 
   <!-- about section -->
 
@@ -44,15 +34,4 @@
       </div>
     </div>
   </section>
-
-  <!-- end about section -->
-
-  <!-- footer section -->
- @include('layouts.footer')
-  <!-- footer section -->
-
-  @include('layouts.js')
-
-</body>
-
-</html>
+@endsection

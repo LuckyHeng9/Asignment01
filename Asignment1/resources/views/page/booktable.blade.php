@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-@include('layouts.css')
-
-</head>
-
-<body class="sub_page">
-
-@include('layouts.header')
+@section('content')
 
   <!-- book section -->
   <section class="book_section layout_padding">
@@ -69,14 +61,4 @@
       </div>
     </div>
   </section>
-  <!-- end book section -->
-
-  <!-- footer section -->
- @include('layouts.footer')
-  <!-- footer section -->
-
-  @include('layouts.js')
-
-</body>
-
-</html>
+@endsection

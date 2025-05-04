@@ -1,16 +1,16 @@
 <?php
 use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
-    return view('home');
+    return view('page.home');
 });
 Route::get('/menu', function () {
-    return view('menu');
+    return view('page.menu');
 });
 
 Route::get('/about', function () {
-    return view('about'); 
+    return view('page.about'); 
 });
 
 Route::get('/booktable', function () {
-    return view('booktable'); 
+    return view('page.booktable'); 
 });
