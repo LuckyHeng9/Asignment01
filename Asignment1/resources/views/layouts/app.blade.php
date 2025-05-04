@@ -29,6 +29,11 @@
     <!-- font awesome style -->
     <link href="css/font-awesome.min.css" rel="stylesheet" />
 
+    <!-- Bootstrap CSS (v5) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Optional: Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
@@ -47,7 +52,7 @@
         <header class="header_section">
             <div class="container">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="/">
                         <span>
                             Feane
                         </span>
@@ -62,17 +67,23 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/') }}">Home</a>
+                                <a class="nav-link" href= "/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/menu') }}">Menu</a>
+                                <a class="nav-link" href="/menu">Menu</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/about') }}">About</a>
+                                <a class="nav-link" href="/about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/booktable') }}">Book Table</a>
+                                <a class="nav-link" href="/booktable">Book Table</a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/show-feature">Features</a>
+                            </li>
+
+                           
                         </ul>
                         <div class="user_option">
                             <a href="" class="user_link">
@@ -140,9 +151,9 @@
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
-                            <a href="" class="order_online">
-                                Order Online
-                            </a>
+                            
+                            <a class="order_online" href="/admin">Admin</a>
+                            
                         </div>
                     </div>
                 </nav>
@@ -160,6 +171,7 @@
     </main>
 
     <!-- footer section -->
+    @if (Request::is('/features'))
     <footer class="footer_section">
         <div class="container">
             <div class="row">
@@ -240,6 +252,7 @@
             </div>
         </div>
     </footer>
+        @endif
     <!-- footer section -->
 
     <!-- jQery -->
